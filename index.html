@@ -25,7 +25,6 @@
       --font-secondary: 'Inter', sans-serif;
     }
 
-    /* Reset and base styles */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -39,7 +38,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      overflow: hidden; /* Prevent body scroll */
+      overflow: hidden;
     }
 
     #root {
@@ -47,7 +46,6 @@
       height: 100vh;
     }
     
-    /* Particle background effect */
     .particle-background {
         position: fixed;
         top: 0;
@@ -65,7 +63,6 @@
         to { background-position: -1000px 500px; }
     }
 
-    /* General component styles */
     h1, h2, h3 {
       font-family: var(--font-primary);
       color: var(--color-primary);
@@ -125,22 +122,22 @@
     }
 
   </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "vite": "https://aistudiocdn.com/vite@^7.1.12",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0"
+  }
+}
+</script>
 </head>
 <body>
   <div class="particle-background"></div>
   <div id="root"></div>
-
-  <script type="importmap">
-  {
-    "imports": {
-      "react": "https://aistudiocdn.com/react@^19.2.0",
-      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-      "react/": "https://aistudiocdn.com/react@^19.2.0/",
-      "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
-    }
-  }
-  </script>
-  <script type="module" src="/index.tsx"></script>
+  <script type="module" src="/src/index.tsx"></script>
 </body>
 </html>
-
