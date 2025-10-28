@@ -3,10 +3,12 @@ import WelcomeScreen from './components/WelcomeScreen';
 import Workspace from './components/Workspace';
 
 const App: React.FC = () => {
+  const [hasMounted, setHasMounted] = useState(false);
   const [showWorkspace, setShowWorkspace] = useState(false);
 
   useEffect(() => {
-    // Check for a persistent guest session ID
+    // This effect runs only on the client, after the initial render.
+    setHasMounted(true);
     const userId = localStorage.getItem('anonymousUserId');
     if (userId) {
       setShowWorkspace(true);
@@ -22,6 +24,12 @@ const App: React.FC = () => {
     }
     setShowWorkspace(true);
   };
+
+  // On the server and during the initial client render, render nothing.
+  // This prevents a mismatch between server and client content, fixing the hydration error.
+  if (!hasMounted) {
+    return null;
+  }
 
   return (
     <>
