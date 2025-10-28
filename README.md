@@ -6,6 +6,7 @@
 *(A placeholder image - you can replace this later by taking a screenshot of your beautiful app!)*
 
 ---
+
 ## About The Project
 
 This application empowers creators to generate professional-grade voice-overs with unparalleled creative control. Instead of relying on static, robotic voices, users can act as a voice director—describing the precise age, gender, accent, and emotional tone they need. The AI then interprets this creative direction to produce a nuanced, authentic, and studio-quality audio performance, ready for any project.
