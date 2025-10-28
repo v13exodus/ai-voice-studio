@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/generate.ts": {
-      "runtime": "vercel-nodejs@18.0.0"
-    }
-  }
-}
