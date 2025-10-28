@@ -1,0 +1,8 @@
+
+{
+  "name": "AI Voice-Over Studio",
+  "description": "Generate voice-overs from a script in any language and accent. Provide a script and a voice description, let AI refine the voice prompt, and create culturally appropriate, authentic audio.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
